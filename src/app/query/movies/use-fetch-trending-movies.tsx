@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 export default function useTrendingMovies() {
-  const { data, isPending, error } = useQuery({
+  const { data, error, isPending } = useQuery({
     queryKey: ['trending movies'],
     queryFn: async () => {
       const trendingMoviesResponse = await axios.get(
