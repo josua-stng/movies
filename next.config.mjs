@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images:{
-        remotePatterns:[
+    images: {
+        unoptimized: false,
+        remotePatterns: [
             {
-                hostname:'image.tmdb.org'
+                hostname: 'image.tmdb.org'
             }
         ]
     }
