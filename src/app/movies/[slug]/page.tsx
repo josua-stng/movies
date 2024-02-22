@@ -27,7 +27,7 @@ export default function MovieDetail({ params }: { params: { slug: any } }) {
           </h1>
           <ul className="flex gap-5 md:list-disc bg-gray-200 px-2 py-2 justify-center rounded-md">
             <li>{data?.status}</li>
-            <li>{data?.genres[0].name}</li>
+            {data?.genres[0] && data?.genres[0].name}
             <li>{data?.popularity}</li>
           </ul>
 
