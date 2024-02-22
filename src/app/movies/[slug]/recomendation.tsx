@@ -1,4 +1,4 @@
-import { SkeletonTrendingMovies } from '@/app/lib/skeleton-trending-movies';
+import { SkeletonCarouselMovies } from '@/app/lib/skeleton-carousel-movies';
 import useRecomendationMovies from '@/app/query/movies/use-fetch-recomendation.movies';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -20,7 +20,7 @@ export default function RecomendationMovie({ movie_id }: any) {
   const { data: recomendationMovie, isPending: loading } =
     useRecomendationMovies(movie_id);
   if (loading) {
-    return <SkeletonTrendingMovies />;
+    return <SkeletonCarouselMovies />;
   }
   const isRecomendationMovieNotAvailable = recomendationMovie.length === 0;
   return (
