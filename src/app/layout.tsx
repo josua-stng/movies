@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import QueryProvider from './query/query-client/query-client-provider';
 import NavbarMovies from './movies/navbar/navbar-movies-';
+import FooterMovies from './footer/page';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NavbarMovies />
         <QueryProvider>{children}</QueryProvider>
+        <FooterMovies />
       </body>
     </html>
   );
