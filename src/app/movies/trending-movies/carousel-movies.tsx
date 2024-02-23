@@ -8,9 +8,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import LayoutTrendingMovies from './layout';
-import { PropsCarouselTrendingMovies } from '@/app/lib/types';
 import 'animate.css';
+import TrendingMovie from './trending-movie';
+import { CarouselTrendingMovies } from '@/app/lib/types';
+
 export function CarouselMovies() {
   const { data: movies, isPending: loading } = useTrendingMovies();
   if (loading) {
@@ -22,9 +23,9 @@ export function CarouselMovies() {
         Trending Movies
       </h1>
       <CarouselContent className="ml-1 animate__animated    ">
-        {movies?.map((movie: PropsCarouselTrendingMovies) => {
+        {movies?.map((movie: CarouselTrendingMovies) => {
           return (
-            <LayoutTrendingMovies
+            <TrendingMovie
               key={movie.id}
               id={movie.id}
               image={movie.backdrop_path}
