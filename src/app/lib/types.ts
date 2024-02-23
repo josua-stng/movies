@@ -1,18 +1,11 @@
-export type PropsTrendingMovies = {
-  id: string;
-  image: string;
-  original_title: string;
-  release_date: number;
-};
-
-export type PropsCarouselTrendingMovies = {
+export type CarouselTrendingMovies = {
   id: string;
   backdrop_path: string;
   original_title: string;
   release_date: number;
 };
 
-export type PropsPopularMovies = {
+export type PopularMovies = {
   id: number;
   original_title: string;
   release_date: number;
@@ -21,16 +14,7 @@ export type PropsPopularMovies = {
   overview: string;
 };
 
-export type PropsLayoutPopularMovies = {
-  id: number;
-  image: string;
-  original_title: string;
-  popularity: number;
-  release_date: number;
-  overview: string;
-};
-
-export type PropsTopMovies = {
+export type TopMovies = {
   id: number;
   original_title: string;
   release_date: number;
@@ -39,36 +23,18 @@ export type PropsTopMovies = {
   overview: string;
 };
 
-export type PropsLayoutTopMovies = {
-  id: number;
-  image: string;
-  original_title: string;
-  popularity: number;
-  release_date: number;
-  overview: string;
-};
-
-export type PropsCarouselTopMovies = {
+export type CarouselTopMovies = {
   id: string;
   backdrop_path: string;
   original_title: string;
   release_date: number;
 };
 
-export type PropsUpcomingMovies = {
+export type UpcomingMovies = {
   id: number;
   original_title: string;
   release_date: number;
   popularity: number;
   backdrop_path: string;
-  overview: string;
-};
-
-export type PropsLayoutUpcomingMovies = {
-  id: number;
-  image: string;
-  original_title: string;
-  popularity: number;
-  release_date: number;
   overview: string;
 };
