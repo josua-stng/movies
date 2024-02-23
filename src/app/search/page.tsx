@@ -29,7 +29,9 @@ export default function SearchMovies() {
     <div className="p-5 mt-5">
       {isMovieNotFound ? (
         <>
-          <h1 className="text-center italic text-2xl font-bold">Movies Not Found</h1>
+          <h1 className="text-center italic text-2xl font-bold">
+            Movies Not Found
+          </h1>
         </>
       ) : (
         <>
