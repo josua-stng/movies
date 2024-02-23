@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import QueryProvider from './query/query-client/query-client-provider';
-import NavbarMovies from './movies/navbar/navbar-movies-';
 import FooterMovies from './footer/page';
+import NavbarMovies from './movies/navbar/navbar-movies';
 
 const inter = Inter({ subsets: ['latin'] });
 
