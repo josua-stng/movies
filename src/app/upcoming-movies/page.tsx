@@ -1,9 +1,9 @@
 'use client';
 import useUpcomingMovies from '../query/movies/use-fetch-upcoming-movies';
 import SkeletonPopularMovie from '../lib/skeleton-popular-movie';
-import LayoutUpcomingMovies from './layout-upcoming-movies';
-import { PropsUpcomingMovies } from '../lib/types';
+import { UpcomingMovies } from '../lib/types';
 import 'animate.css';
+import UpcomingMovie from './upcoming-movie';
 export default function UpcomingMovies() {
   const { data: movies, isPending } = useUpcomingMovies();
   if (isPending) {
@@ -15,9 +15,9 @@ export default function UpcomingMovies() {
         Upcoming Movies
       </h1>
       <div className="grid md:grid-cols-3 lg:grid-cols-4 max-w-8xl gap-5 mx-auto justify-center">
-        {movies?.map((movie: PropsUpcomingMovies) => {
+        {movies?.map((movie: UpcomingMovies) => {
           return (
-            <LayoutUpcomingMovies
+            <UpcomingMovie
               key={movie.id}
               id={movie.id}
               image={movie.backdrop_path}
