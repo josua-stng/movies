@@ -11,7 +11,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { SkeletonCarouselMovies } from '../lib/skeleton-carousel-movies';
-import { PropsCarouselTopMovies } from '../lib/types';
+import { CarouselTopMovies } from '../lib/types';
 export default function CarouselTopMovies() {
   const { data: movies, isPending } = useTopMovies();
   if (isPending) {
@@ -21,7 +21,7 @@ export default function CarouselTopMovies() {
     <Carousel className="w-full max-w-7xl mx-auto">
       <h1 className="font-bold ml-2 text-xl italic mt-3 mb-1">Top Movies</h1>
       <CarouselContent className="ml-1">
-        {movies?.map((movie: PropsCarouselTopMovies) => {
+        {movies?.map((movie: CarouselTopMovies) => {
           return (
             <CarouselItem
               key={movie.id}
