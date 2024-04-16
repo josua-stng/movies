@@ -1,23 +1,24 @@
 'use client';
 import { Input } from '@/components/ui/input';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { FormEvent, useState } from 'react';
 export default function SearchMovies() {
-  const [searchParams, setSearchParams] = useState('');
+  const searchParams = useSearchParams();
+  const [search, setSearch] = useState(searchParams.get('query') ?? '');
   const router = useRouter();
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (searchParams === '') {
+    if (search === '') {
       router.push('/');
       return;
     }
-    router.push(`/search?query=${searchParams}`);
+    router.push(`/search?query=${search}`);
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="hidden sm:inline-block">
       <Input
-        value={searchParams}
-        onChange={(e) => setSearchParams(e.target.value)}
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
         placeholder="search movies"
         type="text"
         className="placeholder:italic"

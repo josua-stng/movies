@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import SearchMovies from './search-movies';
+import SearchMoviesDetail from './search-responsive';
 
 export default function NavbarMovies() {
   return (
@@ -18,7 +19,8 @@ export default function NavbarMovies() {
           Upcoming
         </Link>
       </div>
-      <div>
+      <div className="flex items-center gap-3">
+        <SearchMoviesDetail />
         <SearchMovies />
       </div>
     </nav>
